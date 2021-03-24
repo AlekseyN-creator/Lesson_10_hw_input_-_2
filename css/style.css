@@ -1,0 +1,294 @@
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Обнуляющие стили */
+/* убираем отступы внеш/внут, рамки
+ и прибавление рамок */
+*,
+::before,
+::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: 0;
+}
+/* убираем декорацию у пунктов списка */
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+/* убираем декорацию ссылок 
+при наведении */
+a:hover {
+	text-decoration: none;
+}
+/* обнуляем заголовки */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-style: inherit;
+}
+/* убираем фантомный отступ у картинки */
+img {
+	vertical-align: top;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+body {
+	line-height: 1;
+	color: black;
+	font-family: "Gilroy", sans-serif;
+	padding: 10px;
+	background-color: #000000;
+}
+/* обнуляем кнопки */
+
+button {
+	cursor: pointer;
+	background-color: transparent;
+}
+/* Поля, кнопки, текст ареа наследуют шрифт*/
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+/* Обнуляющие стили закончились */
+/* ================================ */
+
+.form {
+	max-width: 384px;
+	margin: 0px auto;
+}
+.text {
+	color: #fff;
+	text-align: center;
+	font-weight: 700;
+	margin: 0px 0px 41px 0px;
+	font-size: 38px;
+	line-height: 46px;
+}
+
+.form__line {
+	width: 100%;
+}
+
+.form__input {
+	width: 90%;
+	margin: 0px 0px 30px 0px;
+}
+
+.form__label {
+	font-weight: 700;
+}
+
+.input {
+	padding-left: 20px;
+	font-weight: 400;
+	border-radius: 5px;
+	width: 364px;
+	height: 50px;
+}
+.checkbox {
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+}
+
+.checkbox__gender {
+	position: relative;
+	cursor: pointer;
+}
+.checkbox__male {
+	position: relative;
+	color: #fff;
+	cursor: pointer;
+	display: inline;
+}
+.checkbox__input-male {
+	margin: 0px 0px 0px 25px;
+	cursor: pointer;
+	width: 0;
+	height: 0;
+}
+.checkbox__input-male::before {
+	content: "";
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 5px;
+}
+.checkbox__input-male:checked + .checkbox__label-male::before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background-color: #337ab7;
+	border-radius: 50%;
+	top: 4px;
+	left: 4px;
+}
+.checkbox__label-male {
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+	cursor: pointer;
+}
+.checkbox__female {
+	color: #fff;
+	display: inline;
+	position: absolute;
+	cursor: pointer;
+	margin: 0px 0px 0px 50px;
+}
+/*чекбокс скрыт и его не видно ан странице*/
+.checkbox__input-female {
+	/*padding: 0px 0px 0px 50px;
+	color: #fff;
+	margin-left: 50px;
+	cursor: pointer;*/
+	margin: 0px 0px 0px 25px;
+	width: 0;
+	height: 0;
+}
+
+.checkbox__input-female::before {
+	content: "";
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 5px;
+}
+.checkbox__label-female {
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 18px;
+}
+.checkbox__input-female:checked + .checkbox__label-female::before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background-color: #337ab7;
+	border-radius: 50%;
+	top: 4px;
+	left: 4px;
+}
+.checkbox__label {
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+}
+.checkbox__input {
+	margin: 0px 0px 0px 25px;
+	width: 0;
+	height: 0;
+	cursor: pointer;
+}
+.checkbox__input::before {
+	content: "";
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-radius: 5px;
+}
+.checkbox__input:checked + .checkbox__label::before {
+	content: "";
+	position: absolute;
+	width: 12px;
+	height: 12px;
+	background-color: #337ab7;
+	border-radius: 50%;
+	top: 4px;
+	left: 4px;
+}
+span {
+	padding: 0px 0px 0px 10px;
+	color: green;
+	display: inline-block;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 21px;
+}
+.button {
+	margin: 0px auto;
+	color: white;
+	background-color: #337ab7;
+	width: 384px;
+	height: 50px;
+	border-radius: 5px;
+	font-weight: 700;
+	font-size: 24px;
+	cursor: pointer;
+}
+.button:focus {
+	outline: none;
+}
+.button:active {
+	box-shadow: inset 0px 0px 15px 5px black;
+	background-color: #044c8a;
+}
+.form__text {
+	color: #fff;
+	text-align: center;
+}
+.color__green {
+	padding-left: 5px;
+}
